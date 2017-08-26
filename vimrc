@@ -1,8 +1,15 @@
+set nocompatible
+filetype plugin on
+syntax on
+
 " Set standard file encoding
 set encoding=utf8
 
 " No special per file vim override configs
 set nomodeline
+
+" Don't show the normal vim status line
+set noshowmode
 
 " Stop word wrapping
 set nowrap
@@ -66,7 +73,7 @@ nnoremap <S-Tab> :bprev!<CR><Paste>
 
 
 call plug#begin('~/.local/share/nvim/plugged')
-  Plug 'Shougo/unite.vim'
+  Plug 'shougo/denite.nvim'
   Plug 'dracula/vim' 
   Plug 'Yggdroot/indentLine'
   Plug 'airblade/vim-gitgutter'
@@ -78,6 +85,9 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'w0rp/ale'
   Plug 'justinmk/vim-sneak'
+  Plug 'vimwiki/vimwiki'
+  Plug 'godlygeek/tabular'
+  Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 "" Plugin Settings
@@ -101,7 +111,6 @@ nnoremap <Leader>t :CtrlP<CR>
 nnoremap <Leader>fp :Grepper<Space>-query<Space>
 nnoremap <Leader>fb :Grepper<Space>-buffers<Space>-query<Space>-<Space>
 
-
 " VimFiler Settings
 map ` :VimFiler -explorer<CR>
 map ~ :VimFilerCurrentDir -explorer -find<CR>
@@ -118,4 +127,7 @@ xmap f <Plug>Sneak_f
 xmap F <Plug>Sneak_F
 omap f <Plug>Sneak_f
 omap F <Plug>Sneak_F
+
+" Vim Wiki Settings
+let g:vimwiki_list = [{'path':'~/Dropbox/VimWiki', 'syntax': 'markdown', 'ext': '.md' }]
 
