@@ -38,9 +38,10 @@ bindkey -v
 bindkey '^R' history-incremental-search-backward
 
 # Aliases
-alias ev='nvim ~/dotfiles/vimrc'
-alias et='nvim ~/dotfiles/tmux.conf'
-alias ez='nvim ~/dotfiles/zshrc'
-alias vw='nvim -c VimwikiIndex'
+alias vim="nvim"
+alias ev='vim ~/dotfiles/vimrc'
+alias et='vim ~/dotfiles/tmux.conf'
+alias ez='vim ~/dotfiles/zshrc'
+alias vw='vim -c VimwikiIndex'
 alias dc='docker-compose'
 alias mux='tmuxinator'
