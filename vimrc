@@ -1,4 +1,3 @@
-
 " Set standard file encoding
 set encoding=utf8
 
@@ -90,8 +89,8 @@ let g:indentLine_enabled = 1
 let g:indentLine_char = "⟩"
 
 " Vim Airline Settings
-let g:airline#extensions#tabline#enabled=1
-let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 set laststatus=2
 
 " Fuzzy Finder Settings
@@ -119,5 +118,4 @@ xmap f <Plug>Sneak_f
 xmap F <Plug>Sneak_F
 omap f <Plug>Sneak_f
 omap F <Plug>Sneak_F
-
 
