@@ -88,6 +88,8 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'vimwiki/vimwiki'
   Plug 'godlygeek/tabular'
   Plug 'plasticboy/vim-markdown'
+  Plug 'pangloss/vim-javascript'
+  Plug 'mxw/vim-jsx'
 call plug#end()
 
 "" Plugin Settings
@@ -97,8 +99,7 @@ color Dracula
 " indentLine Settings
 let g:indentLine_enabled = 1
 let g:indentLine_char = "⟩"
-
-" Vim Airline Settings
+jkkjk
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 set laststatus=2
@@ -106,6 +107,12 @@ set laststatus=2
 " Fuzzy Finder Settings
 nnoremap <Leader>p :CtrlP<CR>
 nnoremap <Leader>t :CtrlP<CR>
+
+"" Ignore files in .gitginore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" How ctrlp decides on the directory
+let g:ctrlp_working_path_mode = 'ra'
 
 " Grepper Settings
 nnoremap <Leader>fp :Grepper<Space>-query<Space>
@@ -131,3 +138,10 @@ omap F <Plug>Sneak_F
 " Vim Wiki Settings
 let g:vimwiki_list = [{'path':'~/Dropbox/VimWiki', 'syntax': 'markdown', 'ext': '.md' }]
 
+" Vim Jsx Settings
+let g:jsx_ext_required = 0
+
+" VIm Wiki Settings
+let g:vim_markdown_autowrite = 1
+let g:vim_markdown_frontmatter = 1
+set conceallevel=2

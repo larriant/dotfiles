@@ -30,6 +30,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # Auto Suggest
 antigen bundle zsh-users/zsh-autosuggestions
 
+antigen-bundle zsh-users/zsh-history-substring-search
+
 # Git shorts
 antigen bundle git
 
