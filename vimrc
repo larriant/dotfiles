@@ -73,7 +73,7 @@ nnoremap <S-Tab> :bprev!<CR><Paste>
 
 
 call plug#begin('~/.local/share/nvim/plugged')
-  Plug 'shougo/denite.nvim'
+  Plug 'shougo/unite.vim'
   Plug 'dracula/vim' 
   Plug 'Yggdroot/indentLine'
   Plug 'airblade/vim-gitgutter'
@@ -86,21 +86,33 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'w0rp/ale'
   Plug 'justinmk/vim-sneak'
   Plug 'vimwiki/vimwiki'
-  Plug 'godlygeek/tabular'
   Plug 'plasticboy/vim-markdown'
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 "" Plugin Settings
 " Dracula Settings
 color Dracula
 
+" Ale Settings
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '⤫'
+let g:ale_sign_warning = '⚠'
+" Enable integration with airline.
+let g:ale_fixers = { 'javascript': ['eslint'], 'scss': ['stylelint'] }
+let g:ale_linters = { 'javascript': ['eslint'] }
+nmap <leader>d <Plug>(ale_fix)
+
+
 " indentLine Settings
 let g:indentLine_enabled = 1
 let g:indentLine_char = "⟩"
-jkkjk
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
 set laststatus=2
 

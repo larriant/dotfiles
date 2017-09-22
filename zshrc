@@ -36,8 +36,12 @@ antigen-bundle zsh-users/zsh-history-substring-search
 antigen bundle git
 
 # Customize to your needs...
-bindkey -v
-bindkey '^R' history-incremental-search-backward
+bindkey '^R' history-search-backward
+
+
+cdc() {
+  cd "~/NearSt/$1"
+}
 
 # Aliases
 alias vim="nvim"
@@ -47,3 +51,15 @@ alias ez='vim ~/dotfiles/zshrc'
 alias vw='vim -c VimwikiIndex'
 alias dc='docker-compose'
 alias mux='tmuxinator'
+alias t='task'
+alias tn='task project:NearSt'
+alias ts='task sync'
+alias ti='task project:'
+alias diclean='docker images | grep '\''<none>'\'' | grep -P '\''[1234567890abcdef]{12}'\'' -o | xargs -L1 docker rmi'
+alias dclean='docker ps -a | grep -v '\''CONTAINER\|_config\|_data\|_run'\'' | cut -c-12 | xargs docker rm'
+alias jules='echo "I am the best"'
+alias cdn='cdc()'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$HOME/.yarn/bin:$PATH"
