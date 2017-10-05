@@ -12,6 +12,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>AutoHideTmuxClientSession</key>
 	<true/>
 	<key>Custom Color Presets</key>
@@ -649,6 +651,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>98F2680C-B50C-4217-A288-43367D1D8EF9</string>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSFontPanelAttributes</key>
@@ -700,17 +704,17 @@
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>-735 948 735 382 -1920 250 1920 1080 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>-1270 517 620 392 -1920 0 1920 1080 </string>
+	<string>-1270 766 620 392 -1920 250 1920 1080 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 158 606 456 0 0 1280 800 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>310 251 1016 502 0 0 1680 1027 </string>
+	<string>310 229 918 495 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>379 221 1010 622 0 0 1680 1027 </string>
+	<string>-1813 500 1010 622 -1920 250 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>286 285 1010 622 0 0 1680 1027 </string>
+	<string>286 477 570 427 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>871 522 570 449 0 0 1680 1027 </string>
+	<string>871 442 650 527 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>510 119 650 547 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -2670,6 +2674,8 @@
 			<string>/Users/julyandavey</string>
 		</dict>
 	</array>
+	<key>NoSyncAutoBurialReveal</key>
+	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
@@ -2753,7 +2759,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-08-26T09:24:34Z</date>
+	<date>2017-09-28T11:09:23Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -2767,7 +2773,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.15</string>
+	<string>3.1.2</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
