@@ -1,0 +1,19 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~', '~/.config']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    # Zsh
+    ~/.zshrc: zshrc
+    # Nvim
+    ~/.config/nvim/init.vim: vimrc
+    # Tmux
+    ~/.tmux.conf: tmux
+    # Alacrity
+    ~/.alacritty.yml: alacritty
+
