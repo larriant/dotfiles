@@ -16,4 +16,6 @@
     ~/.tmux.conf: tmux
     # Alacrity
     ~/.alacritty.yml: alacritty
+    # Karabiner
+    ~/.config/karabiner/karabiner.json: karabiner 
 
