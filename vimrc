@@ -73,9 +73,9 @@ nnoremap <S-Tab> :bprev!<CR><Paste>
 
 
 call plug#begin('~/.local/share/nvim/plugged')
+  Plug 'christoomey/vim-tmux-navigator'
   Plug 'shougo/unite.vim'
   Plug 'dracula/vim' 
-  Plug 'Yggdroot/indentLine'
   Plug 'airblade/vim-gitgutter'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
@@ -84,14 +84,13 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'Shougo/vimfiler.vim', { 'on': 'VimFiler' }
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'w0rp/ale'
-  Plug 'justinmk/vim-sneak'
   Plug 'vimwiki/vimwiki'
   Plug 'plasticboy/vim-markdown'
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
-  Plug 'christoomey/vim-tmux-navigator'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'editorconfig/editorconfig-vim'
+  Plug 'tpope/vim-commentary'
+  Plug 'junegunn/goyo.vim'
 call plug#end()
 
 "" Plugin Settings
@@ -138,15 +137,6 @@ map ~ :VimFilerCurrentDir -explorer -find<CR>
 let g:deoplete#enable_at_startup = 1
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
-" Sneak Settings
-let g:sneak#s_next = 1
-nmap f <Plug>Sneak_f
-nmap F <Plug>Sneak_F
-xmap f <Plug>Sneak_f
-xmap F <Plug>Sneak_F
-omap f <Plug>Sneak_f
-omap F <Plug>Sneak_F
-
 " Vim Wiki Settings
 let g:vimwiki_list = [{'path':'~/Dropbox/VimWiki', 'syntax': 'markdown', 'ext': '.md' }]
 
@@ -157,3 +147,11 @@ let g:jsx_ext_required = 0
 let g:vim_markdown_autowrite = 1
 let g:vim_markdown_frontmatter = 1
 set conceallevel=2
+
+" PROSE MODE
+function! ProseMode()
+  call goyo#execute(0, [])
+endfunction
+
+command! ProseMode call ProseMode()
+nmap \p :ProseMode<CR>
