@@ -60,7 +60,7 @@ cdc() {
 # Aliases
 alias vim="nvim"
 alias ev='vim ~/dotfiles/vimrc'
-alias et='vim ~/dotfiles/tmux.conf'
+alias et='vim ~/dotfiles/tmux'
 alias ez='vim ~/dotfiles/zshrc'
 alias vw='vim -c VimwikiIndex'
 alias dc='docker-compose'

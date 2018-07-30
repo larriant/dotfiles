@@ -17,5 +17,8 @@
     # Alacrity
     ~/.alacritty.yml: alacritty
     # Karabiner
-    ~/.config/karabiner/karabiner.json: karabiner 
+    ~/.config/karabiner: karabiner
+    # Git
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
 
